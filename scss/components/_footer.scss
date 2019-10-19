@@ -1,0 +1,36 @@
+.footer {
+  background-color: var(--mainColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  padding: 10px 20px;
+  font-family: var(--gothamBook);
+  font-size: var(--fontSizeParagrap);
+  height: 80px;
+  @media (max-width: 1700px) {
+    font-size: 16px;
+    height: auto;
+  }
+  @media (max-width: 480px) {
+    text-align: right;
+  }
+  &__redes-sociale {
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      list-style: none;
+      li {
+        margin-right: 10px;
+        img {
+          width: 20px;
+          padding-top: 6px;
+          @media (max-width: 480px) {
+            width: 30px
+          }
+        }
+      }
+    }
+  }
+}

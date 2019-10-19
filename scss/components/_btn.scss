@@ -1,0 +1,113 @@
+$bg-color: #424242;
+$muted-color: mix(white, $bg-color, 70%);
+.btn {
+  &__reservation {
+    z-index: 999;
+    background-color: var(--secondColor);
+    color: var(--white);
+    position: absolute;
+    top: 600px;
+    left: -78px;
+    padding: 5px 60px 6px;
+    font-family: var(--gothamBold);
+    font-size: var(--fontSizeParagrap);
+    letter-spacing: 1px;
+    &.-contact {
+      top: 425.5px;
+      @media (max-width: 1700px) {
+        top: 384px;
+      }
+      @media (max-width: 720px) {
+        top: 330px;
+      }
+    }
+    @media (max-width: 1700px) {
+      font-size: 16px;
+      padding: 5px 50px 6px;
+      left: -70px;
+      top: 470px;
+    }
+    @media (max-width: 720px) {
+      padding: 5px 30px 6px;
+      left: -50px;
+      top: 20%
+    }
+    transform: rotate(-90deg);
+    &.-card {
+      top: 398px;
+      left: -76px;
+      padding: 5px 60px 10px;
+      @media (max-width: 1700px) {
+        top: 362px;
+        left: -78px;
+      }
+    }
+    &.-galery {
+      top: 486.5px;
+      @media (max-width: 1700px) {
+        top: 435px;
+      }
+      @media (max-width: 720px) {
+        top: 420px;
+      }
+    }
+  }
+  &__card {
+    z-index: 999;
+    letter-spacing: 1px;
+    background-color: var(--secondColor);
+    color: var(--white);
+    position: absolute;
+    top: 600px;
+    right: -94px;
+    padding: 5px 60px;
+    font-family: var(--gothamBold);
+    font-size: var(--fontSizeParagrap);
+    &.-contact {
+      top: 434px;
+      @media (max-width: 1700px) {
+        top: 384px;
+      }
+      @media (max-width: 720px) {
+        top: 330px;
+      }
+    }
+    &.-galery {
+      top: 486.5px;
+      @media (max-width: 1700px) {
+        top: 435px;
+      }
+      @media (max-width: 720px) {
+        top: 420px;
+      }
+    }
+    @media (max-width: 1700px) {
+      font-size: 16px;
+      padding: 5px 42px;
+      right: -69px;
+      top: 470px;
+    }
+    @media (max-width: 720px) {
+      padding: 5px 22px;
+      right: -49px;
+      top: 20%
+    }
+    transform: rotate(-90deg);
+  }
+  &__reservation-submit {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px 15px 25px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    &:hover {
+      color: mix(black, $muted-color, 30%);
+      box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
+    }
+  }
+}

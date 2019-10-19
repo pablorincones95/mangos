@@ -1,0 +1,106 @@
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 70px;
+  @media (max-width: 780px) {
+    padding-top: 50px;
+  }
+  &__icon {
+    img {
+      width: 30px;
+    }
+  }
+  &__sidenav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 10000;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    right: 0;
+    background-color: var(--secondColor);
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    &.-active {
+      width: 579px;
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+    a {
+      padding-bottom: 2.000em;
+      text-decoration: none;
+      font-size: var(--fontSizeSubTitle);
+      font-family: var(--gothamBook);
+      color: var(--white);
+      display: block;
+      transition: 0.3s;
+      @media (max-width: 1700px) {
+        padding-bottom: 35px;
+      }
+      &:hover {
+        color: #f1f1f1;
+      }
+    }
+    .language {
+      padding-top: 32px;
+      @media (max-width: 1700px) {
+        padding-top: 16px;
+      }
+    }
+    .isotipo {
+      padding-bottom: 60px;
+      img {
+        width: 60px
+      }
+      @media (max-width: 1700px) {
+        padding-bottom: 35px;
+      }
+    }
+    .closebtn {
+      position: absolute;
+      top: 45px;
+      right: 60px;
+      font-size: 50px;
+      margin-left: 50px;
+      cursor: pointer;
+    }
+  }
+  &__card {
+    position: absolute;
+    top: 980px;
+    left: -355px;
+    font-family: var(--gothamBook);
+    font-size: var(--fontSizeParagrap);
+    z-index: 9999;
+    @media (max-width: 1700px) {
+      font-size: 16px;
+      left: -310px;
+    }
+    @media (max-width: 1280px) {
+      top: 880px;
+    }
+    transform: rotate(-90deg);
+    .actived {
+      border-bottom: 4px solid var(--secondColor);
+    }
+    a {
+      margin-left: 45px;
+      cursor: pointer;
+    }
+  }
+}

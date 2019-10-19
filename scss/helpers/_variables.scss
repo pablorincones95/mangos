@@ -1,0 +1,75 @@
+/* ********** Custom Properties ********** */
+
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url('../fonts/Gotham-Bold.otf');
+}
+
+@font-face {
+  font-family: 'MyriadPro-Regular';
+  src: url('../fonts/MyriadPro-Regular.otf');
+}
+
+@font-face {
+  font-family: 'ufonts.com_gotham-book';
+  src: url('../fonts/ufonts.com_gotham-book.ttf');
+}
+
+:root {
+  --gothamBold: 'Gotham-Bold';
+  --gothamBook: 'ufonts.com_gotham-book';
+  --alternateFont: monospace;
+  --fontWeightLight: 300;
+  --fontWeightRegular: 400;
+  --fontWeightMedium: 500;
+  --fontWeightSemiBold: 600;
+  --fontWeightBold: 700;
+  --fontSize: 1em;
+  --fontSizeParagrap: 20px;
+  --fontSizeTitle: 45px;
+  --fontSizeSubTitle: 30px;
+  --lineHeight: 1.6;
+  --white: #FFFFFF;
+  --black: #000000;
+  --mainColor: #303030;
+  --main-color-hover: #363c63;
+  --secondColor: #DC6B58;
+  --second-color-hover: #0445af;
+  --alternateColor: #939EBF;
+  --bg-color: var(--mainColor);
+  --bg-modal-color: var(--main-modal-color);
+  --bg-alternate-color: #999;
+  --bg-alternate-modal-color: rgba(153, 153, 153, .75);
+  --border-color: #DDD;
+  --text-color: #242424;
+  --title-color: #333;
+  --link-color: var(--second-color);
+  --link-hover-color: var(--alternate-color);
+  --max-width: 1200px;
+  --header-height: 5rem;
+  --textColor: var(--black);
+}
+
+
+/* ********** Variables ********** */
+
+$breakpoints: ( xs: 30em,
+
+/* 480 / 16  */
+
+s: 37.5em,
+
+/* 600 / 16  */
+
+m: 45em,
+
+/* 720 / 16 */
+
+l: 64em,
+
+/* 1024 / 16 */
+
+xl: 75em
+/* 1200/ 16 */
+
+);

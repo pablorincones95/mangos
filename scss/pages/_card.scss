@@ -1,0 +1,70 @@
+.card {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  &__container {
+    width: 80%;
+  }
+  &__content {
+    display: none;
+    &.-active {
+      display: block;
+    }
+    padding: 0 8%;
+    flex-direction: column;
+    &-border {
+      color: #686868;
+      height: 1px;
+      border: none;
+      background: #686868;
+      margin-top: 30px;
+    }
+    &-title {
+      h2 {
+        font-size: var(--fontSizeSubTitle);
+        font-family: var(--gothamBold);
+        @media (max-width: 1700px) {
+          font-size: 30px;
+        }
+      }
+    }
+    &-row {
+      display: flex;
+      justify-content: flex-start;
+      align-content: center;
+      flex-wrap: wrap;
+    }
+    &__text {
+      margin-right: 5%;
+      flex: 1;
+      margin-top: 40px;
+      img {
+        width: 50px;
+        float: right;
+        @media (max-width: 1700px) {
+          float: center;
+        }
+      }
+      &-title {
+        font-family: var(--gothamBold);
+        font-size: var(--fontSizeParagrap);
+        // padding-bottom: 10px;
+        @media (max-width: 1700px) {
+          font-size: 16px;
+        }
+      }
+      &-description {
+        font-family: var(--gothamBook);
+        font-size: var(--fontSizeParagrap);
+        @media (max-width: 1700px) {
+          font-size: 16px;
+        }
+      }
+      &-title,
+      &-description {
+        line-height: 30px;
+      }
+    }
+  }
+}

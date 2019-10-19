@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mangos | Galerias</title>
+  <link rel="stylesheet" href="js/slick/slick.css">
+  <link rel="stylesheet" href="js/slick/slick-theme.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="loader">
+    <img src="img/isotipo-blanco.png" alt="">
+  </div>
+  <header class="header">
+    <div class="container__menu">
+      <nav class="menu">
+        <div class="menu__icon menu-botton" id="bottonOpen">
+          <img src="img/menu-black.svg" alt="">
+        </div>
+        <div class="menu__sidenav" id="sidenav">
+          <a class="closebtn" id="bottonClose">&times;</a>
+          <a class="isotipo" href=""><img src="img/isotipo-blanco.png" alt=""></a>
+          <a href="index.html">Home</a>
+          <a href="card.html">Carta</a>
+          <a href="galery.html">Galería</a>
+          <a href="#">Reserva</a>
+          <a href="contact.html">Contacto</a>
+          <a class="language" href="">EN</a>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="btn__reservation -galery"><a href="">Reserva</a></div>
+    <div class="btn__card -galery"><a href="">Ver Carta</a></div>
+    <div class="logo -contact">
+      <a href="index.html">
+        <img src="img/logo-naranja.png" alt="logo de magos en color naranja"></a>
+    </div>
+    <section class="galery" id="galery">
+      <div class="galery__container">
+        <div class="container">
+          <div class="mySlides">
+            <img src="img/galeria-1.png" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <img src="img/galeria-2.png" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <img src="img/galeria-1.png" style="width:100%">
+          </div>
+
+          <div class="row">
+            <a class="prev" onclick="plusSlides(-1)"><img src="img/up-arrow.svg" alt=""> </a>
+            <a class="prev -movil" onclick="plusSlides(-1)"><img src="img/previous-black.svg" alt=""> </a>
+            <div class="column">
+              <img class="demo cursor" src="img/galeria-1.png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/galeria-2.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img/galeria-1.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+            </div>
+            <a class="next" onclick="plusSlides(1)"><img src="img/down-arrow.svg" alt=""></a>
+            <a class="next -movil" onclick="plusSlides(1)"><img src="img/skip-black.svg" alt=""></a>
+          </div>
+        </div>
+        <!-- <div class="services-slider">
+                <div class="main-container">
+                  <div class="slider slider-main">
+                    <div>
+                      <img src="https://via.placeholder.com/600x600">
+                    </div>
+                    <div>
+                      <img src="https://via.placeholder.com/600x600/000080">
+                    </div>
+                    <div>
+                      <img src="https://via.placeholder.com/600x600/fff">
+                    </div>
+                    <div>
+                      <img src="https://via.placeholder.com/600x600/sss">
+                    </div>
+                  </div>
+                </div>
+                <div class="nav-container">
+                  <div class="slider-nav">
+                    <div>
+                      <img src="https://via.placeholder.com/600x600">
+                    </div>
+                    <div>
+                      <img src="https://via.placeholder.com/600x600/000080">
+                    </div>
+                    <div>
+                      <img src="https://via.placeholder.com/600x600/fff">
+                    </div>
+                    <div>
+                      <img src="https://via.placeholder.com/600x600/sss">
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__redes-sociale">
+      <ul>
+        <li>
+          <a href=""><img src="img/trivago.png" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="img/facebook-logo.svg" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="img/instagram-logo.svg" alt=""></a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__text">
+      Larcomar, Malecon de la Reserva 610, Miraflores, Lima
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/slick/slick.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+.home {
+  &__description {
+    background: var(--mainColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    color: var(--white);
+    margin-bottom: 60px;
+    padding: 130px 475px;
+    @media (max-width: 1700px) {
+      padding: 130px 270px;
+    }
+    @media (max-width: 1024px) {
+      padding: 50px 70px;
+    }
+    @media (max-width: 780px) {
+      padding: 30px;
+    }
+    &__title {
+      display: flex;
+      flex: 1;
+      padding-left: 30px;
+      img {
+        width: 40px;
+        height: 45px;
+        padding-top: 10px;
+        margin-right: 30px;
+        @media (max-width: 1700px) {
+          width: 30px;
+          height: 35px;
+          
+        }
+        @media (max-width: 1024px) {
+          padding-top: 0px;
+          margin-right: 10px;
+        }
+      }
+      h1 {
+        text-align: left;
+        font-family: var(--gothamBold);
+        font-size: var(--fontSizeTitle);
+        @media (max-width: 1700px) {
+          font-size: 35px;
+        }
+        @media (max-width: 1024px) {
+          font-size: 25px;
+          text-align: center;
+          padding-bottom: 20px;
+        }
+        @include mq(m) {
+          // flex: 1;
+          padding-right: 65px;
+        }
+        @media (max-width: 1700px) {
+          padding-right: 45px;
+          
+        }
+        width: 100%
+      }
+   
+    }
+    &__text {
+      text-align: center;
+      font-family: var(--gothamBook);
+      font-size: var(--fontSizeParagrap);
+      @media (max-width: 1700px) {
+        font-size: 16px;
+      }
+      @include mq(m) {
+        flex: 1;
+        text-align: left;
+        p {
+          line-height: 40px
+        }
+      }
+    }
+  }
+  &__food {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container__one {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    &__slider {
+      width: 100%;
+      margin-bottom: 40px;
+      @include mq(l) {
+        width: 50%;
+        margin-bottom: 0;
+      }
+    }
+    &__description {
+      padding-left: 65px;
+      @media (max-width: 1240px) {
+        padding-left: 25px;
+      }
+      @media (max-width: 1024px) {
+        padding-left: 0;
+      }
+      &__title {
+        h1 {
+          text-align: left;
+          width: 72%;
+          font-size: var(--fontSizeTitle);
+          font-family: var(--gothamBold);
+          @media (max-width: 1700px) {
+            font-size: 30px;
+          }
+        }
+        .border-orange {
+          margin: 20px 0 50px 0;
+          color: var(--secondColor);
+          width: 15%;
+          height: 2px;
+          border: none;
+          background: var(--secondColor);
+          @media (max-width: 1024px) {
+            margin-bottom: 30px
+          }
+        }
+      }
+      &__text {
+        p {
+          font-weight: bold;
+          margin-bottom: 15px;
+          font-size: var(--fontSizeSubTitle);
+          font-family: var(--gothamBold);
+          @media (max-width: 1700px) {
+            font-size: 30px;
+          }
+        }
+        &__hour {
+          font-family: var(--gothamBook);
+          span {
+            display: block;
+            font-size: var(--fontSizeParagrap);
+            @media (max-width: 1700px) {
+              font-size: 16px;
+            }
+          }
+          .days {
+            padding-bottom: 5px;
+            font-size: var(--fontSizeParagrap);
+            font-weight: bold;
+            @media (max-width: 1700px) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

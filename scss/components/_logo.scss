@@ -1,0 +1,18 @@
+.logo {
+  text-align: center;
+  &.-contact, &.-card {
+    padding-top: 130px;
+    @media (max-width: 1700px) {
+      padding: 100px 0 60px 0;
+    }
+    img {
+      width: 150px;
+    }
+  }
+  &.-contact {
+    padding-bottom:95px;
+  }
+  &.-card {
+    padding-bottom:65px;
+  }
+}

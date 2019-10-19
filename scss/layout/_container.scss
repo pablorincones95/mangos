@@ -1,0 +1,12 @@
+.container {
+  &__menu {
+    width: 95%;
+    position: absolute;
+  }
+  &__one {
+    width: 80%;
+    @include mq(1400px) {
+      width: 85%;
+    }
+  }
+}

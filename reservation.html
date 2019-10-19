@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mangos | Reservacion</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header -g">
+    <div class="container__menu">
+      <nav class="menu">
+        <div class="menu__icon" onclick="openNav()">
+          <img src="img/menu-black.svg" alt="">
+        </div>
+        <div id="mySidenav" class="menu__sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">Home</a>
+          <a href="card.html">Carta</a>
+          <a href="galery.html">Galería</a>
+          <a href="reservation.html">Reserva</a>
+          <a href="contact.html">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="btn__card"><a href="">Ver Carta</a></div>
+    <div class="logo -reservation">
+      <a href="index.html">
+        <img src="img/Logo.png" alt=""></a>
+    </div>
+    <section class="reservation">
+      <div class="reservation__container">
+        <div class="reservation__title">
+          <h1>Reservas</h1>
+        </div>
+        <form class="reservation__form">
+          <div class="reservation__form__row-flex">
+            <div class="md-radio md-radio-inline">
+              <input id="3" type="radio" name="g2" checked>
+              <label for="3">Desayuno</label>
+            </div>
+            <div class="md-radio md-radio-inlie">
+              <input id="4" type="radio" name="g2">
+              <label for="4">Almuerzo</label>
+            </div>
+            <div class="md-radio md-radio-inline">
+              <input id="4" type="radio" name="g2">
+              <label for="4">Cena</label>
+            </div>
+          </div>
+
+          <div class="reservation__form__row-flex">
+            <div class="reservation__form__group">
+              <input type="text" required="required" /><span class="highlight"></span><span class="bar"></span>
+              <label>Nombre*</label>
+            </div>
+            <div class="reservation__form__group">
+              <input type="text" required="required" /><span class="highlight"></span><span class="bar"></span>
+              <label>Numeros de invitados*</label>
+            </div>
+          </div>
+
+          <div class="reservation__form__row-flex">
+            <div class="reservation__form__group">
+              <input type="date" required="required" /><span class="highlight"></span><span class="bar"></span>
+            </div>
+            <div class="reservation__form__group">
+              <input type="text" required="required" /><span class="highlight"></span><span class="bar"></span>
+              <label>Teléfono*</label>
+            </div>
+          </div>
+
+          <div class="reservation__form__row-flex -select">
+            <div class="select content-select">
+              <select class="select-text" required>
+                    <option>Hora*</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+              <span class="select-highlight"></span>
+              <span class="select-bar"></span>
+              <label class="select-label">Select</label>
+            </div>
+
+            <div class="reservation__form__group">
+              <input type="email" required="required" /><span class="highlight"></span><span class="bar"></span>
+              <label>E-mail*</label>
+            </div>
+          </div>
+
+          <div class="btn-box">
+            <button class="btn__reservation-submit" type="submit">ENVIAR</button>
+
+          </div>
+        </form>
+
+        <div class="reservation__footer">
+          <p>Larcomar, Malecón de la Reserva 610, Miraflores, Lima 15074</p>
+          <p>info@mangos.com / +51 01 225 67583</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__redes-sociale">
+      <ul>
+        <li>
+          <a href=""><img src="img/facebook-logo.svg" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="img/instagram-logo.svg" alt=""></a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__text">
+      Larcomar, Malecon de la Reserva 610, Miraflores, Lima
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
