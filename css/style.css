@@ -1322,6 +1322,10 @@ img {
   }
 }
 
+#food-2, #food-3 {
+  display: none;
+}
+
 .contact {
   margin-bottom: 90px;
   display: flex;

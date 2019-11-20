@@ -32,6 +32,12 @@ $(document).ready(function() {
       });
     }
   });
+
+  $('.slider__home').on('afterChange', function(event, slick, currentSlide){   
+    $('.home__food__description__text').hide();
+    $('.home__food__description__text[data-id=' + (currentSlide + 1) + ']').show();
+  });
+    
 });
 
 // loader
