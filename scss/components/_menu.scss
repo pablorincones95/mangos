@@ -97,10 +97,18 @@
     transform: rotate(-90deg);
     .actived {
       border-bottom: 4px solid var(--secondColor);
+
     }
     a {
       margin-left: 45px;
       cursor: pointer;
+    }
+
+    
+    &.--degustacion {
+      .actived {
+        border-bottom: 4px solid var(--colorGold);
+      }
     }
   }
 }

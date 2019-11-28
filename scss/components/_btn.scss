@@ -7,7 +7,7 @@ $muted-color: mix(white, $bg-color, 70%);
     color: var(--white);
     position: absolute;
     top: 600px;
-    left: -78px;
+    left: -86px;
     padding: 5px 60px 6px;
     font-family: var(--gothamBold);
     font-size: var(--fontSizeParagrap);
@@ -20,6 +20,12 @@ $muted-color: mix(white, $bg-color, 70%);
       @media (max-width: 720px) {
         top: 330px;
       }
+    }
+    @media (max-width: 1920px) {
+      left: -78px;
+    }
+    @media (max-width: 1913px) {
+      left: -86px;
     }
     @media (max-width: 1700px) {
       font-size: 16px;
@@ -35,12 +41,21 @@ $muted-color: mix(white, $bg-color, 70%);
     transform: rotate(-90deg);
     &.-card {
       top: 398px;
-      left: -76px;
+      left: -84px;
       padding: 5px 60px 10px;
+      @media (max-width: 1920px) {
+        left: -77px;
+      }
+      @media (max-width: 1913px) {
+        left: -83px;
+      }
+
       @media (max-width: 1700px) {
         top: 362px;
         left: -78px;
       }
+
+    
     }
     &.-galery {
       top: 486.5px;

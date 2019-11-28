@@ -1,0 +1,84 @@
+.degustacion {
+  &__food {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container__one {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      @include mq(l) {
+        flex-wrap: nowrap;
+      }
+    }
+    &__slider {
+      width: 100%;
+      margin-bottom: 40px;
+      @include mq(l) {
+        width: 60%;
+        margin-bottom: 0;
+      }
+    }
+    &__description {
+      padding-left: 5rem;
+      @media (max-width: 1240px) {
+        padding-left: 4rem;
+      }
+      @media (max-width: 1023px) {
+        padding-left: 0;
+      }
+      &__title {
+        h1 {
+          text-align: left;
+          width: 72%;
+          font-size: var(--fontSizeTitle);
+          font-family: var(--gothamBold);
+          @media (max-width: 1700px) {
+            font-size: 30px;
+          }
+        }
+        .border-orange {
+          margin: 20px 0 50px 0;
+          color: var(--secondColor);
+          width: 15%;
+          height: 2px;
+          border: none;
+          background: var(--secondColor);
+          @media (max-width: 1024px) {
+            margin-bottom: 30px
+          }
+        }
+      }
+      &__text {
+        p {
+          font-weight: bold;
+          margin-bottom: 15px;
+          font-size: var(--fontSizeSubTitle);
+          font-family: var(--gothamBold);
+          @media (max-width: 1700px) {
+            font-size: 30px;
+          }
+        }
+        &__hour {
+          font-family: var(--gothamBook);
+          
+          span {
+            display: block;
+            font-size: var(--fontSizeParagrap);
+            @media (max-width: 1700px) {
+              font-size: 16px;
+            }
+          }
+          .days {
+            padding-bottom: 5px;
+            font-size: var(--fontSizeParagrap);
+            font-weight: bold;
+            @media (max-width: 1700px) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

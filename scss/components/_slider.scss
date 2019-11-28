@@ -1,5 +1,35 @@
 .slider {
   &__home {}
+
+  &__snack-degustacion, &__piqueos-degustacion, &__sandwiches-degustacion, &__fondos-degustacion, &__postres-degustacion {
+    .slick-initialized .slick-slide {
+
+      width: 100%;
+  
+    }
+    .slick-prev::before {
+      content: '';
+      background-image: url('../img/prev-arrow.svg');
+      background-size: cover;
+      height: 55px;
+      width: 55px;
+      position: absolute;
+    }
+    .slick-prev {
+      left: 25px;
+      top: 46.5%;
+      z-index: 9999;
+    }
+
+    .slide {
+      img {
+        width: 100%;
+        @include mq(l) {
+          height: 1470px;
+        }
+      }
+    }
+  }
 }
 
 .slick-prev:after {
