@@ -1,11 +1,83 @@
 .menu {
   display: flex;
-  justify-content: flex-end;
-  padding-top: 70px;
-  @media (max-width: 780px) {
-    padding-top: 50px;
+  justify-content: space-around;
+  padding: 30px 0;
+  align-items: center;
+  background-color: var(--mainColor);
+  &.--degustacion {
+    background-color: #987f60;
+    @include mq(m) {
+      background-color: transparent;
+    }
+    .black {
+      display: none;
+      @include mq(m) {
+        display: block;
+      }
+    }
+    .white {
+      display: block;
+      @include mq(m) {
+        display: none;
+      }
+    }
+  }
+  &.--pages {
+    .black {
+      display: none;
+      @include mq(m) {
+        display: block;
+      }
+    }
+    .white {
+      display: block;
+      @include mq(m) {
+        display: none;
+      }
+    }
+  }
+  @include mq(m) {
+    padding-top: 70px;
+    background-color: transparent;
+    justify-content: flex-end;
+    padding-right: 3rem;
+  }
+  &__lenguage {
+    color: var(--white);
+    align-self: flex-start;
+    margin-top: 10px;
+    font-family: var(--gothamBold);
+    font-size: 25px;
+    @include mq(m) {
+      display: none;
+    }
+  }
+  &__logo {
+    width: 120px;
+    @include mq(m) {
+      display: none;
+    }
   }
   &__icon {
+    align-self: flex-start;
+    cursor: pointer;
+    z-index: 9999;
+    margin-top: 10px;
+    @include mq(m) {
+      margin-right: 4%;
+    }
+    @include mq(l) {
+      margin-right: 5%;
+    }
+    @include mq(xl) {
+      margin-right: 6%;
+    }
+    @include mq(1700px) {
+      margin-right: 6.8%;
+    }
+    @include mq(2000px) {
+      margin-right: 17.8%;
+    }
     img {
       width: 30px;
     }
@@ -38,19 +110,20 @@
     &.-active {
       width: 579px;
       @media (max-width: 1024px) {
-        width: 100%;
+        width: 60%;
       }
     }
     a {
-      padding-bottom: 2.000em;
       text-decoration: none;
       font-size: var(--fontSizeSubTitle);
       font-family: var(--gothamBook);
       color: var(--white);
       display: block;
       transition: 0.3s;
-      @media (max-width: 1700px) {
-        padding-bottom: 35px;
+      text-align: center;
+      padding-bottom: 46px;
+      @media (max-width: 720px) {
+        padding-bottom: 2.000em;
       }
       &:hover {
         color: #f1f1f1;
@@ -73,11 +146,15 @@
     }
     .closebtn {
       position: absolute;
-      top: 45px;
-      right: 60px;
+      top: 20px;
+      right: 15px;
       font-size: 50px;
       margin-left: 50px;
       cursor: pointer;
+      @include mq(m) {
+        top: 45px;
+        right: 60px;
+      }
     }
   }
   &__card {
@@ -94,17 +171,46 @@
     @media (max-width: 1280px) {
       top: 880px;
     }
+    @media (max-width: 720px) {
+      display: none;
+    }
     transform: rotate(-90deg);
     .actived {
       border-bottom: 4px solid var(--secondColor);
-
     }
     a {
       margin-left: 45px;
       cursor: pointer;
     }
-
-    
+    &.--degustacion {
+      .actived {
+        border-bottom: 4px solid var(--colorGold);
+      }
+    }
+  }
+  &__card-mobile {
+    margin-top: 153px;
+    font-family: var(--gothamMedium);
+    font-size: var(--fontSizeParagrap);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    flex-wrap: wrap;
+    padding: 15px 0 10px 0;
+    font-size: 14px;
+    @include mq(m) {
+      display: none;
+    }
+    .actived {
+      border-bottom: 4px solid var(--secondColor);
+      font-weight: bold;
+    }
+    a {
+      padding: 0 5px;
+      cursor: pointer;
+    }
     &.--degustacion {
       .actived {
         border-bottom: 4px solid var(--colorGold);

@@ -1,11 +1,14 @@
 .slider {
-  &__home {}
-
-  &__snack-degustacion, &__piqueos-degustacion, &__sandwiches-degustacion, &__fondos-degustacion, &__postres-degustacion {
+  &__home {
+    max-width: 794px;
+  }
+  &__snack-degustacion,
+  &__piqueos-degustacion,
+  &__sandwiches-degustacion,
+  &__fondos-degustacion,
+  &__postres-degustacion {
     .slick-initialized .slick-slide {
-
       width: 100%;
-  
     }
     .slick-prev::before {
       content: '';
@@ -20,12 +23,11 @@
       top: 46.5%;
       z-index: 9999;
     }
-
     .slide {
       img {
         width: 100%;
         @include mq(l) {
-          height: 1470px;
+          height: 1250px;
         }
       }
     }
@@ -35,8 +37,8 @@
 .slick-prev:after {
   content: "";
   display: none;
-  
 }
+
 .slick-next::before {
   content: '';
   background-image: url('../img/next-arrow.svg');
@@ -45,12 +47,14 @@
   width: 55px;
   position: absolute;
 }
+
 .slick-next {
   right: 80px;
   top: 46.5%;
 }
 
-.slick-prev::before, .slick-next::before {
+.slick-prev::before,
+.slick-next::before {
   font-size: 55px;
   line-height: 1;
   opacity: .75;
@@ -59,8 +63,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 .slick-prev:hover:after,
 .slick-next:hover:after {
-    color: #7e7e7e;
+  color: #7e7e7e;
 }

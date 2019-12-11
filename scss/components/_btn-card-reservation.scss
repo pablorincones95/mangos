@@ -1,0 +1,34 @@
+.btn-card-reservation {
+  display: flex;
+  text-align: center;
+  &.--degustacion {
+    margin-top: 163px;
+  }
+  @include mq(m) {
+    display: none;
+  }
+  &__reservation {
+    padding: 1rem;
+    flex: 1;
+    z-index: 999;
+    background-color: var(--secondColor);
+    color: var(--white);
+    font-family: var(--gothamBold);
+    font-size: var(--fontSizeParagrap);
+    &.--degustacion {
+      background-color: #987f60;
+    }
+  }
+  &__card {
+    padding: 1rem;
+    flex: 1;
+    z-index: 999;
+    background-color: #e88877;
+    color: var(--white);
+    font-family: var(--gothamBold);
+    font-size: var(--fontSizeParagrap);
+    &.--degustacion {
+      background-color: #a78f72;
+    }
+  }
+}

@@ -3,6 +3,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    @include mq(m) {
+      text-align: left;
+    }
     .container__one {
       display: flex;
       flex-wrap: wrap;
@@ -14,6 +18,10 @@
     &__slider {
       width: 100%;
       margin-bottom: 40px;
+      padding: 0 9%;
+      @include mq(m) {
+        padding: 0;
+      }
       @include mq(l) {
         width: 60%;
         margin-bottom: 0;
@@ -27,12 +35,20 @@
       @media (max-width: 1023px) {
         padding-left: 0;
       }
+      @media (max-width: 723px) {
+        padding-left: 0;
+        padding: 0 10%;
+        background-image: url("../img/mg-bg-2.png");
+        background-repeat: no-repeat;
+        background-size: 500px;
+        background-position: center right -260px;
+      }
       &__title {
         h1 {
           text-align: left;
           width: 72%;
           font-size: var(--fontSizeTitle);
-          font-family: var(--gothamBold);
+          font-family: var(--bebas);
           @media (max-width: 1700px) {
             font-size: 30px;
           }
@@ -61,7 +77,6 @@
         }
         &__hour {
           font-family: var(--gothamBook);
-          
           span {
             display: block;
             font-size: var(--fontSizeParagrap);

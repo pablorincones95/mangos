@@ -10,14 +10,14 @@
 </head>
 
 <body>
-  <div class="loader">
-    <img src="img/isotipo-blanco.png" alt="">
-  </div>
   <header class="header">
     <div class="container__menu">
-      <nav class="menu">
+      <nav class="menu --pages">
+        <span class="menu__lenguage">EN</span>
+        <img class="menu__logo" src="img/logo-blanco.png" alt="">
         <div class="menu__icon menu-botton" id="bottonOpen">
-          <img src="img/menu-black.svg" alt="">
+          <img class="black" src="img/menu-black.svg" alt="">
+          <img class="white" src="img/menu.svg" alt="">
         </div>
         <div class="menu__sidenav" id="sidenav">
           <a class="closebtn" id="bottonClose">&times;</a>
@@ -25,7 +25,9 @@
           <a href="index.html">Home</a>
           <a href="card.html">Carta</a>
           <a href="galery.html">Galería</a>
-          <!-- <a href="reservation.html">Reserva</a> -->
+          <a href="menu-degustacion.html">Menu degustacion</a>
+          <a href="eventos.html">Eventos</a>
+          <a href="#">Reserva</a>
           <a href="contact.html">Contacto</a>
           <a class="language" href="">EN</a>
         </div>
@@ -46,10 +48,16 @@
       <a id="sandwiches">Sandwiches & Ensaladas</a>
       <a id="piqueos">Piqueos</a>
       <a class="actived" id="snack">Snack</a>
-
     </div>
     <section class="card">
-      <div class="card__container ">
+      <div class="menu__card-mobile">
+        <a class="actived" id="snack">Snack</a>
+        <a id="piqueos">Piqueos</a>
+        <a id="fondos">Fondos</a>
+        <a id="sandwiches">Sandw. & Ensa.</a>
+        <a id="postres">Postres</a>
+      </div>
+      <div class="card__container__img">
         <div class="banner__card">
           <img class="banner__card__img -active" id="snackImg" src="img/imagen-carta.png" alt="">
           <img class="banner__card__img" id="piqueosImg" src="img/banner2-popular.png" alt="">
@@ -57,6 +65,9 @@
           <img class="banner__card__img" id="fondosImg" src="img/banner2-popular.png" alt="">
           <img class="banner__card__img" id="postresImg" src="img/imagen-carta.png" alt="">
         </div>
+      </div>
+      <div class="card__container ">
+
 
         <div class="card__content -active" id="snackContent">
           <div class="card__content-title">
@@ -490,6 +501,9 @@
       </div>
     </section>
 
+    <section class="btn-card-reservation">
+      <div class="btn-card-reservation__reservation"><a href="">Reserva</a></div>
+    </section>
   </main>
 
   <footer class="footer">

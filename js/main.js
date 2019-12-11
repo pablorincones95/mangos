@@ -2,15 +2,15 @@
 if ($('.slider__home')) {
   $('.slider__home').slick({});
 
-  $('.slider__home').on('afterChange', function(event, slick, currentSlide){   
+  $('.slider__home').on('afterChange', function(event, slick, currentSlide) {
     $('.home__food__description__text').hide();
     $('.home__food__description__text[data-id=' + (currentSlide + 1) + ']').show();
-  });  
+  });
 }
 
 //SLIDER EVENT
 if ($('.slider__event')) {
-  
+
 }
 
 $('.slider__event').slick({
@@ -20,8 +20,7 @@ $('.slider__event').slick({
   arrows: true,
   prevArrow: $('.prev-arrow-event'),
   nextArrow: $('.next-arrow-event'),
-  responsive: [
-    {
+  responsive: [{
       breakpoint: 1024,
       settings: {
         slidesToShow: 3,
@@ -43,19 +42,19 @@ $('.slider__event').slick({
         slidesToScroll: 1
       }
     }
-  ] 
+  ]
 });
 
-$('.slider__event').on('afterChange', function(event, slick, currentSlide){   
+$('.slider__event').on('afterChange', function(event, slick, currentSlide) {
   $('.event__event-description__title').hide();
   //$('.event__event-description__title[data-id=' + (currentSlide + 1) + ']').css('display', 'flex');
   console.log(currentSlide);
-  
-  if ((currentSlide + 1) == 1 || (currentSlide + 1) == 2 || (currentSlide + 1) ==  3 ) {
+
+  if ((currentSlide + 1) == 1 || (currentSlide + 1) == 2 || (currentSlide + 1) == 3) {
     $('#event-title-1').css('display', 'flex');
   }
 
-  if ((currentSlide + 1) == 4 || (currentSlide + 1) == 5 || (currentSlide + 1) ==  6) {
+  if ((currentSlide + 1) == 4 || (currentSlide + 1) == 5 || (currentSlide + 1) == 6) {
     $('#event-title-2').css('display', 'flex');
   }
 
@@ -98,15 +97,21 @@ $(window).on('resize orientationchange', function() {
 
 // LOADER
 
-document.getElementsByTagName("html")[0].style.overflow = "hidden";
-window.addEventListener("load", function(event) {
-  setTimeout(function() {
-    var loading = document.querySelector('.loader');
-    document.querySelector('body').removeChild(loading);
-    document.getElementsByTagName("html")[0].style.overflow = "auto";
-  }, 3000);
+let homePage = document.getElementById('home-page')
 
-});
+if (homePage) {
+  document.getElementsByTagName("html")[0].style.overflow = "hidden";
+  window.addEventListener("load", function(event) {
+    setTimeout(function() {
+      var loading = document.querySelector('.loader');
+      document.querySelector('body').removeChild(loading);
+      document.getElementsByTagName("html")[0].style.overflow = "auto";
+    }, 3000);
+
+  });
+}
+
+
 
 // MENU
 
@@ -272,7 +277,7 @@ if (snack, piqueos, sandwiches, fondos, postres) {
 
 // MENU DEGUSTACION
 
-var snackDegustacion = document.getElementById('snackDegustacion');
+/*var snackDegustacion = document.getElementById('snackDegustacion');
 var piqueosDegustacion = document.getElementById('piqueosDegustacion');
 var sandwichesDegustacion = document.getElementById('sandwichesDegustacion');
 var fondosDegustacion = document.getElementById('fondosDegustacion');
@@ -378,7 +383,7 @@ if (snackDegustacion, piqueosDegustacion, sandwichesDegustacion, fondosDegustaci
     }
 
   })
-}
+}*/
 
 
 var sliderGalery = document.getElementById("galery")
@@ -416,15 +421,30 @@ if (sliderGalery) {
 // video home
 
 let videoHome = document.getElementById('video-home');
+let btnVideo = document.getElementById('btn-video');
 
 if (videoHome) {
+
+  btnVideo.addEventListener("click", function() {
+    if (videoHome.paused) {
+      videoHome.play()
+    } else {
+      videoHome.pause();
+    }
+  });
+
+
   videoHome.addEventListener("play", function() {
-    document.getElementById("banner-logo").style.display = "none"; 
+    document.getElementById("banner-logo").style.opacity = "0";
+    btnVideo.style.opacity = "0";
   });
-  
+
   videoHome.addEventListener("pause", function() {
-    document.getElementById("banner-logo").style.display = "block";
+    document.getElementById("banner-logo").style.opacity = "1";
+    btnVideo.style.opacity = "1";
   });
+
+
 }
 
 // SLIDER DEGUSTACION

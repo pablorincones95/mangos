@@ -17,6 +17,9 @@
     @media (max-width: 1024px) {
       width: 100%;
     }
+    @media (max-width: 724px) {
+      margin-top: 200px;
+    }
     iframe {
       width: 667px;
       height: 593px;
@@ -39,33 +42,38 @@
   }
   &__information {
     padding-left: 65px;
-    @media (max-width: 1700px) {
-      padding-left: 45px;
-    }
-    @media (max-width: 1280px) {
+    @media (max-width: 1240px) {
       padding-left: 25px;
     }
     @media (max-width: 1024px) {
-      padding-left: 0;
+      padding: 0;
+      width: 100%;
     }
     &__title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include mq(m) {
+        display: block;
+      }
       h1 {
-        text-align: left;
-        width: 72%;
+        font-size: 25px;
+        text-align: center;
         font-family: var(--gothamBold);
-        font-size: var(--fontSizeTitle);
-        @media (max-width: 1700px) {
-          font-size: 35px;
+        @include mq(m) {
+          text-align: left;
+          width: 72%;
+          font-size: 30px;
         }
-        @media (max-width: 1024px) {
-          font-size: 25px;
+        @include mq(xl) {
+          font-size: var(--fontSizeTitle);
         }
       }
       .border-orange {
         margin: 20px 0 50px 0;
         color: var(--secondColor);
         width: 15%;
-        height: 2px;
+        height: 4px;
         border: none;
         background: var(--secondColor);
         @media (max-width: 1024px) {
@@ -77,22 +85,53 @@
       &.-one {
         margin-bottom: 50px;
         @media (max-width: 1024px) {
-          margin-bottom: 30px
+          margin-bottom: 15px;
+          text-align: center;
         }
       }
       h2 {
-        font-weight: bold;
-        font-weight: bold;
-        margin-bottom: 15px;
-        font-size: var(--fontSizeSubTitle);
+        font-size: 25px;
+        text-align: center;
         font-family: var(--gothamBold);
-        @media (max-width: 1700px) {
+        @include mq(m) {
+          text-align: left;
+          width: 72%;
           font-size: 30px;
+          margin-bottom: 15px;
+        }
+        @include mq(xl) {
+          font-size: var(--fontSizeSubTitle);
         }
       }
       p {
+        text-align: center;
         margin-bottom: 10px;
         font-family: var(--gothamBook);
+        font-size: 14px;
+        @include mq(xl) {
+          font-size: 16px;
+          text-align: left;
+        }
+      }
+      .p-one {
+        display: none;
+        @include mq(l) {
+          display: block;
+        }
+      }
+      .bold {
+        font-weight: bold;
+        font-family: var(--gothamBold);
+        @include mq(l) {
+          font-weight: normal;
+          font-family: var(--gothamBook);
+        }
+      }
+      .hours-title {
+        display: none;
+        @include mq(l) {
+          display: block;
+        }
       }
       &__hour {
         span {

@@ -20,6 +20,8 @@
   <header class="header">
     <div class="container__menu">
       <nav class="menu">
+        <span class="menu__lenguage">EN</span>
+        <img class="menu__logo" src="img/logo-blanco.png" alt="">
         <div class="menu__icon menu-botton" id="bottonOpen">
           <img src="img/menu.svg" alt="">
         </div>
@@ -29,6 +31,8 @@
           <a href="index.html">Home</a>
           <a href="card.html">Carta</a>
           <a href="galery.html">Galería</a>
+          <a href="menu-degustacion.html">Menu degustacion</a>
+          <a href="eventos.html">Eventos</a>
           <a href="#">Reserva</a>
           <a href="contact.html">Contacto</a>
           <a class="language" href="">EN</a>
@@ -38,19 +42,24 @@
     </div>
   </header>
 
-  <main>
+  <main id="home-page" class="home">
     <section class="banner__home">
       <!-- esto es para poner la imagen  -->
-      <img src="img/home-header.png" alt="">
+      <!--<img src="img/home-header.png" alt=""> -->
       <!-- esto es para poner el video  -->
-      <!-- <video id="video-home" class="video-home" controls>
-        <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
-      </video> -->
+      <video id="video-home" class="video-home">
+          <source src="http://pro.contralogo.com/mangos/img/MANGOS-editado.mp4" type="video/ogg">
+        </video>
+      <button id="btn-video" class="banner__home__btn-play"><img src="img/play-button.svg" alt=""></button>
       <div class="btn__reservation"><a href="">Reserva</a></div>
       <div id="banner-logo" class="banner__home__logo">
         <img src="img/logo-blanco.png" alt="">
       </div>
       <div class="btn__card"><a href="card.html">Ver Carta</a></div>
+    </section>
+    <section class="btn-card-reservation">
+      <div class="btn-card-reservation__reservation"><a href="">Reserva</a></div>
+      <div class="btn-card-reservation__card"><a href="card.html">Ver Carta</a></div>
     </section>
     <section class="home__description">
       <div class="home__description__title">
@@ -58,7 +67,7 @@
         <h1>La mejor vista de Larcomar </h1>
       </div>
       <div class="home__description__text">
-        <p>Una opción gastronómica variada en una renovada carta que va de lo tradicional a lo contemporáneo para disfrutar en familia y amigos.  </p>
+        <p>Una opción gastronómica variada en una renovada carta que va de lo tradicional a lo contemporáneo para disfrutar en familia y amigos. </p>
       </div>
     </section>
 

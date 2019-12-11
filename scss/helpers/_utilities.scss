@@ -28,6 +28,7 @@
 .text-center {
   text-align: center;
 }
+
 .u-btn {
   font-size: 1.1rem;
   margin: 1rem auto;
@@ -96,3 +97,7 @@
   background-color: var(--colorGold) !important;
 }
 
+.font-medium {
+  font-family: var(--gothamMedium) !important;
+  font-weight: bold !important;
+}

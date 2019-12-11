@@ -15,9 +15,27 @@
   src: url('../fonts/ufonts.com_gotham-book.ttf');
 }
 
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url('../fonts/Gotham-Medium.otf');
+}
+
+@font-face {
+  font-family: 'Gotham--Bold';
+  src: url('../fonts/Gotham-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Gotham-Book-Regular';
+  src: url('../fonts/Gotham-Book-Regular.otf');
+}
+
 :root {
-  --gothamBold: 'Gotham-Bold';
-  --gothamBook: 'ufonts.com_gotham-book';
+  --gothamMedium: 'Gotham-Medium';
+  --bebas: 'BebasNeueBold';
+  --gothamBold: 'Gotham--Bold';
+  --gothamBook: 'Gotham-Book-Regular';
+  --M: 'MyriadPro-Regular';
   --alternateFont: monospace;
   --fontWeightLight: 300;
   --fontWeightRegular: 400;

@@ -3,15 +3,49 @@
   display: flex;
   justify-content: center;
   align-content: center;
+  flex-direction: column;
+  align-items: center;
+  @include mq(l) {
+    margin-bottom: 5rem;
+  }
   &__container {
-    width: 80%;
+    width: 100%;
+    @include mq(m) {
+      width: 70%;
+    }
+    @include mq(1900px) {
+      width: 100%;
+      max-width: 1311px;
+    }
+    &__img {
+      width: 100%;
+      @include mq(m) {
+        width: 80%;
+      }
+      @include mq(1900px) {
+        width: 100%;
+        max-width: 1562px;
+      }
+    }
+  }
+  &__container-text {
+    width: 100%;
+    @include mq(m) {
+      width: 80%;
+    }
   }
   &__content {
     display: none;
     &.-active {
       display: block;
+      padding: 0 9%;
+      @include mq(m) {
+        padding: 0;
+      }
     }
-    padding: 0 8%;
+    @include mq(m) {
+      padding: 0 8%;
+    }
     flex-direction: column;
     &-border {
       color: #686868;
@@ -24,11 +58,12 @@
       h2 {
         font-size: var(--fontSizeSubTitle);
         font-family: var(--gothamBold);
+        font-weight: 100;
+        letter-spacing: 2px;
         @media (max-width: 1700px) {
           font-size: 30px;
         }
       }
-
       &.--degustacion {
         margin-top: 2.5rem;
       }
@@ -40,9 +75,12 @@
       flex-wrap: wrap;
     }
     &__text {
-      margin-right: 5%;
-      flex: 1;
+      margin: 0 10px;
       margin-top: 40px;
+      @include mq(m) {
+        flex: 1;
+        margin-right: 5%;
+      }
       img {
         width: 50px;
         float: right;
@@ -53,10 +91,8 @@
       &-title {
         font-family: var(--gothamBold);
         font-size: var(--fontSizeParagrap);
+        letter-spacing: 1px;
         // padding-bottom: 10px;
-        @media (max-width: 1700px) {
-          font-size: 16px;
-        }
       }
       &-description {
         font-family: var(--gothamBook);
@@ -69,36 +105,29 @@
       &-description {
         line-height: 30px;
       }
-
       &.--degustacion {
         margin-top: 30px;
       }
     }
-
     .row {
       display: flex;
       flex-direction: row;
       padding: 0;
     }
-
     &__slider {
       flex: 3;
     }
-
-    
     &__slider {
       flex: 3;
     }
-
     &__column {
       flex: 1;
     }
   }
-
-  #snackContentDegustacion, 
-  #piqueosContentDegustacion, 
-  #sandwichesContentDegustacion, 
-  #fondosContentDegustacion, 
+  #snackContentDegustacion,
+  #piqueosContentDegustacion,
+  #sandwichesContentDegustacion,
+  #fondosContentDegustacion,
   #postresContentDegustacion {
     padding: 0;
   }

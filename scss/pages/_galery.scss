@@ -11,6 +11,10 @@
     @media (max-width: 1280px) {
       width: 80%
     }
+    @media (max-width: 720px) {
+      width: 100%;
+      margin-top: 153px;
+    }
   }
 }
 
@@ -94,8 +98,8 @@ img {
   img {
     width: 30px;
     @media (max-width: 720px) {
-      width: 20px;
-      max-width: 20px;
+      width: 30px;
+      max-width: 30px;
     }
   }
   @media (max-width: 1024px) {
@@ -113,11 +117,17 @@ img {
 /* Position the "next button" to the right */
 
 .next {
-  padding: 20px
+  padding: 22px 20px;
+  @media (max-width: 720px) {
+    padding: 0 10px 0 0;
+  }
 }
 
 .prev {
-  padding: 20px
+  padding: 20px;
+  @media (max-width: 720px) {
+    padding: 0 0 0 10px;
+  }
 }
 
 
@@ -178,7 +188,8 @@ img {
 
 .column {
   margin: 10px;
-  height: 200px;
+  height: 191px;
+  max-width: 191px;
   @media (max-width: 1400px) {
     height: 150px;
   }
