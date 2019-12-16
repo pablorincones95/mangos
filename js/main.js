@@ -51,10 +51,12 @@ $('.slider__event').on('afterChange', function(event, slick, currentSlide) {
   console.log(currentSlide);
 
   if ((currentSlide + 1) == 1 || (currentSlide + 1) == 2 || (currentSlide + 1) == 3) {
-    $('#event-title-1').css('display', 'flex');
+    //$('#event-title-1').css('display', 'flex');
+    $('#event-title-1').fadeIn(1000);
   }
 
   if ((currentSlide + 1) == 4 || (currentSlide + 1) == 5 || (currentSlide + 1) == 6) {
+    $('#event-title-2').fadeIn(1000);
     $('#event-title-2').css('display', 'flex');
   }
 
@@ -274,6 +276,149 @@ if (snack, piqueos, sandwiches, fondos, postres) {
 
   })
 }
+
+
+// CARD MENU MOBILE
+
+var snackMobile = document.getElementById('snack-mobile');
+var piqueosMobile = document.getElementById('piqueos-mobile');
+var sandwichesMobile = document.getElementById('sandwiches-mobile');
+var fondosMobile = document.getElementById('fondos-mobile');
+var postresMobile = document.getElementById('postres-mobile');
+var snackContent = document.getElementById('snackContent');
+var piqueosContent = document.getElementById('piqueosContent');
+var sandwichesContent = document.getElementById('sandwichesContent');
+var fondosContent = document.getElementById('fondosContent');
+var postresContent = document.getElementById('postresContent');
+var snackImg = document.getElementById('snackImg');
+var piqueosImg = document.getElementById('piqueosImg');
+var sandwichesImg = document.getElementById('sandwichesImg');
+var fondosImg = document.getElementById('fondosImg');
+var postresImg = document.getElementById('postresImg');
+
+if (snackMobile, piqueosMobile, sandwichesMobile, fondosMobile, postresMobile) {
+  snackMobile.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (!snackContent.classList.contains('-active')) {
+      piqueosContent.classList.remove('-active');
+      sandwichesContent.classList.remove('-active');
+      fondosContent.classList.remove('-active');
+      postresContent.classList.remove('-active');
+      piqueosImg.classList.remove('-active');
+      sandwichesImg.classList.remove('-active');
+      fondosImg.classList.remove('-active');
+      postresImg.classList.remove('-active');
+      snackContent.classList.add('-active');
+      snackImg.classList.add('-active');
+
+    }
+
+    if (!snackMobile.classList.contains('actived')) {
+      piqueosMobile.classList.remove('actived');
+      sandwichesMobile.classList.remove('actived');
+      fondosMobile.classList.remove('actived');
+      postresMobile.classList.remove('actived');
+      snackMobile.classList.add('actived');
+    }
+  });
+  piqueosMobile.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (!piqueosContent.classList.contains('-active')) {
+      snackContent.classList.remove('-active');
+      sandwichesContent.classList.remove('-active');
+      fondosContent.classList.remove('-active');
+      postresContent.classList.remove('-active');
+      snackImg.classList.remove('-active');
+      sandwichesImg.classList.remove('-active');
+      fondosImg.classList.remove('-active');
+      postresImg.classList.remove('-active');
+      piqueosContent.classList.add('-active');
+      piqueosImg.classList.add('-active');
+    }
+
+    if (!piqueosMobile.classList.contains('actived')) {
+      snackMobile.classList.remove('actived');
+      sandwiches.classList.remove('actived');
+      fondosMobile.classList.remove('actived');
+      postresMobile.classList.remove('actived');
+      piqueosMobile.classList.add('actived');
+    }
+  })
+
+  sandwichesMobile.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (!sandwichesContent.classList.contains('-active')) {
+      piqueosContent.classList.remove('-active');
+      snackContent.classList.remove('-active');
+      fondosContent.classList.remove('-active');
+      postresContent.classList.remove('-active');
+      piqueosImg.classList.remove('-active');
+      snackImg.classList.remove('-active');
+      fondosImg.classList.remove('-active');
+      postresImg.classList.remove('-active');
+      sandwichesContent.classList.add('-active');
+      sandwichesImg.classList.add('-active');
+    }
+
+    if (!sandwichesMobile.classList.contains('actived')) {
+      snackMobile.classList.remove('actived');
+      piqueosMobile.classList.remove('actived');
+      fondosMobile.classList.remove('actived');
+      postresMobile.classList.remove('actived');
+      sandwichesMobile.classList.add('actived');
+    }
+  })
+
+  fondosMobile.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (!fondosContent.classList.contains('-active')) {
+      snackContent.classList.remove('-active');
+      piqueosContent.classList.remove('-active');
+      sandwichesContent.classList.remove('-active');
+      postresContent.classList.remove('-active');
+      snackImg.classList.remove('-active');
+      piqueosImg.classList.remove('-active');
+      sandwichesImg.classList.remove('-active');
+      postresImg.classList.remove('-active');
+      fondosContent.classList.add('-active');
+      fondosImg.classList.add('-active');
+    }
+
+    if (!fondosMobile.classList.contains('actived')) {
+      snackMobile.classList.remove('actived');
+      piqueosMobile.classList.remove('actived');
+      sandwichesMobile.classList.remove('actived');
+      postresMobile.classList.remove('actived');
+      fondosMobile.classList.add('actived');
+    }
+  })
+
+  postresMobile.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (!postresContent.classList.contains('-active')) {
+      snackContent.classList.remove('-active');
+      piqueosContent.classList.remove('-active');
+      sandwichesContent.classList.remove('-active');
+      fondosContent.classList.remove('-active');
+      snackImg.classList.remove('-active');
+      piqueosImg.classList.remove('-active');
+      sandwichesImg.classList.remove('-active');
+      fondosImg.classList.remove('-active');
+      postresContent.classList.add('-active');
+      postresImg.classList.add('-active');
+    }
+
+    if (!postresMobile.classList.contains('actived')) {
+      snackMobile.classList.remove('actived');
+      piqueosMobile.classList.remove('actived');
+      sandwichesMobile.classList.remove('actived');
+      fondosMobile.classList.remove('actived');
+      postresMobile.classList.add('actived');
+    }
+
+  })
+}
+
 
 // MENU DEGUSTACION
 

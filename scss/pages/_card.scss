@@ -77,9 +77,12 @@
     &__text {
       margin: 0 10px;
       margin-top: 40px;
+      @include mq(406px) {
+        width: 44%;
+      }
       @include mq(m) {
-        flex: 1;
         margin-right: 5%;
+        width: 26%;
       }
       img {
         width: 50px;
@@ -90,8 +93,11 @@
       }
       &-title {
         font-family: var(--gothamBold);
-        font-size: var(--fontSizeParagrap);
+        font-size: 16px;
         letter-spacing: 1px;
+        @include mq(m) {
+          font-size: var(--fontSizeParagrap);
+        }
         // padding-bottom: 10px;
       }
       &-description {
@@ -99,6 +105,9 @@
         font-size: var(--fontSizeParagrap);
         @media (max-width: 1700px) {
           font-size: 16px;
+        }
+        @media (max-width: 720px) {
+          font-size: 14px;
         }
       }
       &-title,

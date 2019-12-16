@@ -2398,10 +2398,15 @@ img {
   margin: 0 10px;
   margin-top: 40px;
 }
+@media screen and (min-width: 406px) {
+  .card__content__text {
+    width: 44%;
+  }
+}
 @media screen and (min-width: 45em) {
   .card__content__text {
-    flex: 1;
     margin-right: 5%;
+    width: 26%;
   }
 }
 .card__content__text img {
@@ -2415,8 +2420,13 @@ img {
 }
 .card__content__text-title {
   font-family: var(--gothamBold);
-  font-size: var(--fontSizeParagrap);
+  font-size: 16px;
   letter-spacing: 1px;
+}
+@media screen and (min-width: 45em) {
+  .card__content__text-title {
+    font-size: var(--fontSizeParagrap);
+  }
 }
 .card__content__text-description {
   font-family: var(--gothamBook);
@@ -2425,6 +2435,11 @@ img {
 @media (max-width: 1700px) {
   .card__content__text-description {
     font-size: 16px;
+  }
+}
+@media (max-width: 720px) {
+  .card__content__text-description {
+    font-size: 14px;
   }
 }
 .card__content__text-title, .card__content__text-description {
