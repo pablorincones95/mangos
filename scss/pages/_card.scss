@@ -116,6 +116,7 @@
       }
       &.--degustacion {
         margin-top: 30px;
+        width: auto;
       }
     }
     .row {
@@ -133,6 +134,7 @@
       flex: 1;
     }
   }
+  &.--degustacion {}
   #snackContentDegustacion,
   #piqueosContentDegustacion,
   #sandwichesContentDegustacion,

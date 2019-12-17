@@ -162,6 +162,10 @@
         @media (max-width: 1700px) {
           font-size: 30px;
         }
+        @media (max-width: 720px) {
+          font-size: 25px;
+          margin-bottom: 1rem;
+        }
       }
       p {
         font-family: var(--gothamBold);
@@ -174,6 +178,7 @@
         @media (max-width: 720px) {
           text-align: center;
           font-size: 14px;
+          font-family: var(--gothamBook);
         }
         b {
           color: #987f60;

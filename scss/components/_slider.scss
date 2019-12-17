@@ -1,6 +1,11 @@
 .slider {
   &__home {
     max-width: 794px;
+    @include mq(m) {
+      .slick-prev::before {
+        display: none;
+      }
+    }
   }
   &__snack-degustacion,
   &__piqueos-degustacion,
@@ -12,16 +17,33 @@
     }
     .slick-prev::before {
       content: '';
-      background-image: url('../img/prev-arrow.svg');
+      background-image: url('../img/back-mobile-arrow.svg');
       background-size: cover;
-      height: 55px;
-      width: 55px;
+      height: 30px;
+      width: 30px;
       position: absolute;
+      opacity: 1 !important;
+    }
+    @include mq(m) {
+      .slick-prev::before {
+        content: '';
+        background-image: url('../img/prev-arrow.svg');
+        background-size: cover;
+        height: 55px;
+        width: 55px;
+        position: absolute;
+      }
     }
     .slick-prev {
-      left: 25px;
-      top: 46.5%;
-      z-index: 9999;
+      left: -45px;
+      top: 43.5%;
+    }
+    @include mq(m) {
+      .slick-prev {
+        left: 25px;
+        top: 46.5%;
+        z-index: 9999;
+      }
     }
     .slide {
       img {
@@ -41,16 +63,50 @@
 
 .slick-next::before {
   content: '';
-  background-image: url('../img/next-arrow.svg');
+  background-image: url('../img/next-mobile-arrow.svg');
   background-size: cover;
-  height: 55px;
-  width: 55px;
+  height: 30px;
+  width: 30px;
   position: absolute;
+  opacity: 1 !important;
+}
+
+@include mq(m) {
+  .slick-next::before {
+    content: '';
+    background-image: url('../img/next-arrow.svg');
+    background-size: cover;
+    height: 55px;
+    width: 55px;
+    position: absolute;
+  }
+}
+
+.slick-prev::before {
+  content: '';
+  background-image: url('../img/back-mobile-arrow.svg');
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  opacity: 1 !important;
 }
 
 .slick-next {
-  right: 80px;
-  top: 46.5%;
+  right: -15px;
+  top: 43.5%;
+}
+
+@include mq(m) {
+  .slick-next {
+    right: 80px;
+    top: 46.5%;
+  }
+}
+
+.slick-prev {
+  left: -45px;
+  top: 43.5%;
 }
 
 .slick-prev::before,

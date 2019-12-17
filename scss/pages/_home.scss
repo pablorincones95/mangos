@@ -124,6 +124,7 @@
       }
       @media (max-width: 1024px) {
         padding: 0;
+        width: auto;
       }
       &__title {
         display: flex;
@@ -174,9 +175,10 @@
           font-weight: bold;
           margin-bottom: 15px;
           font-family: var(--gothamBold);
-          font-size: 25px;
+          font-size: 20px;
           text-align: center;
           font-family: var(--gothamBold);
+          letter-spacing: 1px;
           @include mq(m) {
             text-align: left;
             font-size: 30px;

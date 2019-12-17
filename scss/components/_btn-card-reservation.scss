@@ -2,7 +2,7 @@
   display: flex;
   text-align: center;
   &.--degustacion {
-    margin-top: 163px;
+    margin-top: 153px;
   }
   @include mq(m) {
     display: none;

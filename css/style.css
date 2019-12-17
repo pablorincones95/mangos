@@ -720,6 +720,12 @@ img {
     font-size: 30px;
   }
 }
+@media (max-width: 720px) {
+  .banner__card__text h1 {
+    font-size: 25px;
+    margin-bottom: 1rem;
+  }
+}
 .banner__card__text p {
   font-family: var(--gothamBold);
   font-size: var(--fontSizeParagrap);
@@ -734,6 +740,7 @@ img {
   .banner__card__text p {
     text-align: center;
     font-size: 14px;
+    font-family: var(--gothamBook);
   }
 }
 .banner__card__text p b {
@@ -1210,7 +1217,7 @@ img {
 }
 @media (max-width: 720px) {
   .menu__sidenav a {
-    padding-bottom: 2em;
+    padding-bottom: 2.5rem;
   }
 }
 .menu__sidenav a:hover {
@@ -1317,21 +1324,43 @@ img {
 .slider__home {
   max-width: 794px;
 }
+@media screen and (min-width: 45em) {
+  .slider__home .slick-prev::before {
+    display: none;
+  }
+}
 .slider__snack-degustacion .slick-initialized .slick-slide, .slider__piqueos-degustacion .slick-initialized .slick-slide, .slider__sandwiches-degustacion .slick-initialized .slick-slide, .slider__fondos-degustacion .slick-initialized .slick-slide, .slider__postres-degustacion .slick-initialized .slick-slide {
   width: 100%;
 }
 .slider__snack-degustacion .slick-prev::before, .slider__piqueos-degustacion .slick-prev::before, .slider__sandwiches-degustacion .slick-prev::before, .slider__fondos-degustacion .slick-prev::before, .slider__postres-degustacion .slick-prev::before {
   content: "";
-  background-image: url("../img/prev-arrow.svg");
+  background-image: url("../img/back-mobile-arrow.svg");
   background-size: cover;
-  height: 55px;
-  width: 55px;
+  height: 30px;
+  width: 30px;
   position: absolute;
+  opacity: 1 !important;
+}
+@media screen and (min-width: 45em) {
+  .slider__snack-degustacion .slick-prev::before, .slider__piqueos-degustacion .slick-prev::before, .slider__sandwiches-degustacion .slick-prev::before, .slider__fondos-degustacion .slick-prev::before, .slider__postres-degustacion .slick-prev::before {
+    content: "";
+    background-image: url("../img/prev-arrow.svg");
+    background-size: cover;
+    height: 55px;
+    width: 55px;
+    position: absolute;
+  }
 }
 .slider__snack-degustacion .slick-prev, .slider__piqueos-degustacion .slick-prev, .slider__sandwiches-degustacion .slick-prev, .slider__fondos-degustacion .slick-prev, .slider__postres-degustacion .slick-prev {
-  left: 25px;
-  top: 46.5%;
-  z-index: 9999;
+  left: -45px;
+  top: 43.5%;
+}
+@media screen and (min-width: 45em) {
+  .slider__snack-degustacion .slick-prev, .slider__piqueos-degustacion .slick-prev, .slider__sandwiches-degustacion .slick-prev, .slider__fondos-degustacion .slick-prev, .slider__postres-degustacion .slick-prev {
+    left: 25px;
+    top: 46.5%;
+    z-index: 9999;
+  }
 }
 .slider__snack-degustacion .slide img, .slider__piqueos-degustacion .slide img, .slider__sandwiches-degustacion .slide img, .slider__fondos-degustacion .slide img, .slider__postres-degustacion .slide img {
   width: 100%;
@@ -1349,16 +1378,48 @@ img {
 
 .slick-next::before {
   content: "";
-  background-image: url("../img/next-arrow.svg");
+  background-image: url("../img/next-mobile-arrow.svg");
   background-size: cover;
-  height: 55px;
-  width: 55px;
+  height: 30px;
+  width: 30px;
   position: absolute;
+  opacity: 1 !important;
+}
+
+@media screen and (min-width: 45em) {
+  .slick-next::before {
+    content: "";
+    background-image: url("../img/next-arrow.svg");
+    background-size: cover;
+    height: 55px;
+    width: 55px;
+    position: absolute;
+  }
+}
+.slick-prev::before {
+  content: "";
+  background-image: url("../img/back-mobile-arrow.svg");
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  opacity: 1 !important;
 }
 
 .slick-next {
-  right: 80px;
-  top: 46.5%;
+  right: -15px;
+  top: 43.5%;
+}
+
+@media screen and (min-width: 45em) {
+  .slick-next {
+    right: 80px;
+    top: 46.5%;
+  }
+}
+.slick-prev {
+  left: -45px;
+  top: 43.5%;
 }
 
 .slick-prev::before,
@@ -1438,7 +1499,7 @@ img {
   text-align: center;
 }
 .btn-card-reservation.--degustacion {
-  margin-top: 163px;
+  margin-top: 153px;
 }
 @media screen and (min-width: 45em) {
   .btn-card-reservation {
@@ -1762,6 +1823,7 @@ img {
 @media (max-width: 1024px) {
   .home__food__description {
     padding: 0;
+    width: auto;
   }
 }
 .home__food__description__title {
@@ -1828,9 +1890,10 @@ img {
   font-weight: bold;
   margin-bottom: 15px;
   font-family: var(--gothamBold);
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
   font-family: var(--gothamBold);
+  letter-spacing: 1px;
 }
 @media screen and (min-width: 45em) {
   .home__food__description__text p {
@@ -2447,6 +2510,7 @@ img {
 }
 .card__content__text.--degustacion {
   margin-top: 30px;
+  width: auto;
 }
 .card__content .row {
   display: flex;
@@ -2900,6 +2964,9 @@ img {
 
 .event {
   padding-top: 153px;
+  /* #event-title-2 {
+    display: none;
+  }*/
 }
 @media screen and (min-width: 45em) {
   .event {
@@ -3074,9 +3141,6 @@ img {
   .event__event-description__slider .slide__description ul li {
     font-size: 16px;
   }
-}
-.event #event-title-2 {
-  display: none;
 }
 
 .degustacion__food {
